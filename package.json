@@ -1,8 +1,8 @@
 {
   "name": "kokchix-brain-games",
   "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "set of mini games",
+  "keywords": "game, brain-games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
