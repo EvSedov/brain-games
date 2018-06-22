@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import gameCalc from '../games/calc';
+import { gameCalc, gameRules } from '../games/calc';
+import { gameProcess } from '..';
 
-gameCalc();
+gameProcess(gameCalc, gameRules);
