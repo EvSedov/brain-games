@@ -14,11 +14,14 @@ export const gameProcess = (funcName, gameDescription) => {
   const userName = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${userName}!\n`);
   for (let i = 0; i < numberOfAttempts; i += 1) {
-    const correctAndUserAnswer = funcName();
-    const correctAnswer = car(correctAndUserAnswer);
-    const userAnswer = cdr(correctAndUserAnswer);
-    if (userAnswer !== correctAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
+    const gameData = funcName();
+    const question = car(gameData);
+    const correctAnswer = cdr(gameData);
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    const newUserAnswer = (parseInt(userAnswer, 10)) ? Number(userAnswer) : userAnswer;
+    if (newUserAnswer !== correctAnswer) {
+      console.log(`'${newUserAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
   Let's try again, ${userName}!`);
       return;
     }
@@ -26,4 +29,3 @@ export const gameProcess = (funcName, gameDescription) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
-

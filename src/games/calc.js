@@ -1,6 +1,5 @@
-import readlineSync from 'readline-sync';
 import { cons } from 'hexlet-pairs';
-import { randomInteger } from '..';
+import { randomInteger, gameProcess } from '..';
 
 const minNum = 1;
 const maxNum = 10;
@@ -24,8 +23,8 @@ export const gameCalc = () => {
   };
   const correctAnswer = getCorrectAnswer();
   const question = `${num1} ${arithmeticSigns} ${num2}`;
-  console.log(`Question: ${question}`);
-  const userAnswer = Number(readlineSync.question('Your answer: '));
-  const correctAndUserAnswer = cons(correctAnswer, userAnswer);
-  return correctAndUserAnswer;
+  const gameData = cons(question, correctAnswer);
+  return gameData;
 };
+
+export const play = () => gameProcess(gameCalc, gameDescription);
