@@ -1,6 +1,9 @@
 install:
 	npm install
 
+start-game:
+	npm run babel-node -- src/bin/brain-games.js
+
 start-even:
 	npm run babel-node -- src/bin/brain-even.js
 
@@ -9,6 +12,9 @@ start-calc:
 
 start-gcd:
 	npm run babel-node -- src/bin/brain-gcd.js
+
+start-balance:
+	npm run babel-node -- src/bin/brain-balance.js
 
 publish:
 	npm publish
