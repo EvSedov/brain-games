@@ -1,15 +1,13 @@
 // game module calculator
 import { cons } from 'hexlet-pairs';
-import gameProcess from '..';
-import { generateNumber } from '../utils';
+import { gameProcess, numberOfAttempts } from '..';
+import generateNumber from '../utils';
 
-const minNum = 1;
-const maxNum = 10;
 const gameDescription = 'What is the result of the expression?';
 
 const gameCalc = () => {
-  const num1 = generateNumber(minNum, maxNum);
-  const num2 = generateNumber(minNum, maxNum);
+  const num1 = generateNumber(1, 10);
+  const num2 = generateNumber(1, 10);
   const num3 = generateNumber(0, 2);
   let correctAnswer = 0;
   let arithmeticSigns = '';
@@ -27,8 +25,8 @@ const gameCalc = () => {
       arithmeticSigns = '*';
   }
   const question = `${num1} ${arithmeticSigns} ${num2}`;
-  const gameData = cons(question, correctAnswer);
+  const gameData = cons(question, correctAnswer.toString());
   return gameData;
 };
 
-export default () => gameProcess(gameCalc, gameDescription);
+export default () => gameProcess(gameCalc, gameDescription, numberOfAttempts);
