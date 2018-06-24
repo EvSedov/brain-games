@@ -8,7 +8,7 @@ const minNum = 1;
 const maxNum = 100;
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-export const gameGcd = () => {
+const gameGcd = () => {
   const num1 = generateNumber(minNum, maxNum);
   const num2 = generateNumber(minNum, maxNum);
   const correctAnswer = gcd(num1, num2);
@@ -17,4 +17,4 @@ export const gameGcd = () => {
   return gameData;
 };
 
-export const play = () => gameProcess(gameGcd, gameDescription);
+export default () => gameProcess(gameGcd, gameDescription);

@@ -7,7 +7,7 @@ const minNum = 1;
 const maxNum = 10;
 const gameDescription = 'What is the result of the expression?';
 
-export const gameCalc = () => {
+const gameCalc = () => {
   const num1 = generateNumber(minNum, maxNum);
   const num2 = generateNumber(minNum, maxNum);
   const num3 = generateNumber(0, 2);
@@ -31,4 +31,4 @@ export const gameCalc = () => {
   return gameData;
 };
 
-export const play = () => gameProcess(gameCalc, gameDescription);
+export default () => gameProcess(gameCalc, gameDescription);
