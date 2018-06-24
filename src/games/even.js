@@ -1,14 +1,14 @@
+// game module even number
 import { cons } from 'hexlet-pairs';
-import { randomInteger, gameProcess } from '..';
+import gameProcess from '..';
+import { generateNumber, isEven } from '../utils';
 
 const minNum = 1;
 const maxNum = 100;
-export const gameDescription = 'Answer "yes" if number even otherwise answer "no".\n';
-
-export const isEven = value => (value % 2 === 0);
+const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
 
 export const gameEvenNumber = () => {
-  const question = randomInteger(minNum, maxNum);
+  const question = generateNumber(minNum, maxNum);
   const correctAnswer = isEven(question) ? 'yes' : 'no';
   const gameData = cons(question, correctAnswer);
   return gameData;
