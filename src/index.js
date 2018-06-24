@@ -1,15 +1,14 @@
-// gameplay module
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-export const numberOfAttempts = 3;
+const numberOfAttempts = 3;
 
-export const gameProcess = (funcName, gameDescription, numberOfRepetitions) => {
+export default (funcName, gameDescription) => {
   console.log('Welcome to Brain Games!');
   console.log(`${gameDescription}\n`);
   const userName = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${userName}!\n`);
-  for (let i = 0; i < numberOfRepetitions; i += 1) {
+  for (let i = 0; i < numberOfAttempts; i += 1) {
     const gameData = funcName();
     const question = car(gameData);
     const correctAnswer = cdr(gameData);

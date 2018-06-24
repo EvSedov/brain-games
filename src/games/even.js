@@ -1,6 +1,5 @@
-// game module even number
 import { cons } from 'hexlet-pairs';
-import { gameProcess, numberOfAttempts } from '..';
+import gameProcess from '..';
 import generateNumber from '../utils';
 
 const gameDescription = 'Answer "yes" if number even otherwise answer "no".';
@@ -14,4 +13,4 @@ const gameEvenNumber = () => {
   return gameData;
 };
 
-export default () => gameProcess(gameEvenNumber, gameDescription, numberOfAttempts);
+export default () => gameProcess(gameEvenNumber, gameDescription);

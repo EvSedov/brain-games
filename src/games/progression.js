@@ -1,6 +1,5 @@
-// game module even number
 import { cons } from 'hexlet-pairs';
-import { gameProcess, numberOfAttempts } from '..';
+import gameProcess from '..';
 import generateNumber from '../utils';
 
 const gameDescription = 'What number is missing in this progression?';
@@ -9,8 +8,9 @@ const gameProgression = () => {
   const beginningOfProgression = generateNumber(1, 100);
   const progressionStep = generateNumber(1, 10);
   const randomIndex = generateNumber(0, 9);
+  const lengthOfProgression = 9;
   let progression = [beginningOfProgression];
-  for (let i = 0; i < 9; i += 1) {
+  for (let i = 0; i < lengthOfProgression; i += 1) {
     progression = [...progression, progression[i] + progressionStep];
   }
   const correctAnswer = progression[randomIndex];
@@ -20,4 +20,4 @@ const gameProgression = () => {
   return gameData;
 };
 
-export default () => gameProcess(gameProgression, gameDescription, numberOfAttempts);
+export default () => gameProcess(gameProgression, gameDescription);

@@ -1,6 +1,5 @@
-// game module calculates the greatest common divisor
 import { cons } from 'hexlet-pairs';
-import { gameProcess, numberOfAttempts } from '..';
+import gameProcess from '..';
 import generateNumber from '../utils';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
@@ -27,4 +26,4 @@ const gameGcd = () => {
   return gameData;
 };
 
-export default () => gameProcess(gameGcd, gameDescription, numberOfAttempts);
+export default () => gameProcess(gameGcd, gameDescription);

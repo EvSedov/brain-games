@@ -1,11 +1,7 @@
-// game module balance number
-
 import { cons } from 'hexlet-pairs';
 import gameProcess from '..';
-import { generateNumber, numberOfAttempts } from '../utils';
+import generateNumber from '../utils';
 
-const minNum = 10;
-const maxNum = 100;
 const gameDescription = 'Balance the given number.';
 
 const balancedNumber = (value) => {
@@ -22,11 +18,11 @@ const balancedNumber = (value) => {
 };
 
 const gameBalance = () => {
-  const num1 = generateNumber(minNum, maxNum);
+  const num1 = generateNumber(10, 100);
   const correctAnswer = balancedNumber(num1);
   const question = `${num1}`;
   const gameData = cons(question, correctAnswer.toString());
   return gameData;
 };
 
-export default () => gameProcess(gameBalance, gameDescription, numberOfAttempts);
+export default () => gameProcess(gameBalance, gameDescription);

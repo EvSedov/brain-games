@@ -1,6 +1,5 @@
-// game module calculator
 import { cons } from 'hexlet-pairs';
-import { gameProcess, numberOfAttempts } from '..';
+import gameProcess from '..';
 import generateNumber from '../utils';
 
 const gameDescription = 'What is the result of the expression?';
@@ -29,4 +28,4 @@ const gameCalc = () => {
   return gameData;
 };
 
-export default () => gameProcess(gameCalc, gameDescription, numberOfAttempts);
+export default () => gameProcess(gameCalc, gameDescription);
