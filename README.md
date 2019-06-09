@@ -2,7 +2,7 @@
 ## Set of mini games (набор мини-игр).
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/6d6714ad25c55f117f9b/maintainability)](https://codeclimate.com/github/EvSedov/project-lvl1-s292/maintainability)
-[![Build Status](https://travis-ci.org/Kokchix/brain-games.svg?branch=master)](https://travis-ci.org/EvSedov/brain-games)
+[![Build Status](https://travis-ci.org/EvSedov/brain-games.svg?branch=master)](https://travis-ci.org/EvSedov/brain-games)
 
 Если Вы хотите повеселиться и "размять свои мозги", установите себе на компьютер набор мини-игр, играйте и получайте удовольствие ;)
 
